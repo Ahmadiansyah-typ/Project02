@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viwport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<title>Idul Fitri 1445 H</title>
+<style type="text/css">
+body, html {
+    height: 100%;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+p{
+    font-size: 4vw;
+    background-color: black;
+    padding: 4px;
+    border-radius: 20px;;
+}
+
+.bg {
+    background-image: url(https://i.pinimg.com/564x/09/ea/85/09ea850e9d735e60c3d2d9392c74ec8c.jpg);
+    height: 70%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container {
+    height: 40%;
+    width: 80%;
+    margin: auto;
+
+}
+
+.text-animate {
+    overflow: hidden;
+    border-right: .15em solid darkkhaki;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+        typing 1.0s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: darkkhaki;
+    }
+}
+
+.image-center {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-center {
+    width: max-content;
+    margin: 40px auto 0 auto;
+    text-shadow: 2px 2px black;
+}
+
+.next {
+    background-color: black;
+    border-radius: 30px;
+    border-style: dashed;
+    border-width: 3px 3px;
+    border-color: burlywood;
+    color: burlywood;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.vertical-buttons {
+  flex-direction: row;
+}
+
+.btn {
+  border-top:0;
+  border-left:0;
+  border-right:0;
+  border-bottom:0;
+  padding:10px 20px;
+  text-decoration:none;
+  font-family:sans-serif;
+  font-size: 20pt;
+  margin-top: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.container-class {
+  height: 100%;
+  width: 100%;
+}
+
+.popup-class {
+ height: 55%;
+ width: 55%;
+}
+
+.title-class {
+ margin-top: auto;
+}
+
+.htmlContainer-class {
+ margin-top: auto;
+}
+
+</style>
+	</head>
+	<body class="bg">
+    <audio id="player" autoplay loop>
+      <source src="Music/SelamatHariLebaran_ProjectPop.mp3" type="audio/mp3">
+    </audio>
+		<div class="container">
+			<div class="image-center text-center">
+				<img src="https://media.tenor.com/gNYCnviHZl8AAAAi/tkthao219-bubududu.gif" alt="" id="image-gif" height="350" width="350">
+				<p class="text-center" id="texts" style="text-align: center;">Woaahh</p>
+				<button type="button" class="next text-center" value="0">Next =></button>
+			</div>
+		</div>
+	
+<script type="text/javascript" language="javascript">
+<!--
+var z = document.getElementById("player");
+var x="Aldi";
+var y=prompt("Hallo, dengan siapa ya?");
+asking();
+
+function asking()
+{
+if(y!="" && y!=null)
+{return fitri(x,y);}
+
+if(y=="" || y==null)
+{
+y=prompt("Loh, ko gak ada nama.. Siapa ya?");
+return asking();
+}
+}
+
+function fitri(x,y)
+{
+var ask=confirm("Haii "+y+", Makasih yaa sudah mau klik link yang "+x+" bagikan, ada hal yang ingin "+x+" sampaikan, sebelumnya jika volume suara yang digunakan tinggi, mohon untuk mengecilkan volumenya..");
+}
+//-->
+const Iya = document.querySelector(".next");
+const Text = document.getElementById("texts");
+const Image = document.querySelector("#image-gif");
+
+Iya.addEventListener("click", function () {
+    z.play();
+    Iya.value = parseInt(Iya.value) + 1;
+    Text.classList.remove('text-animate');
+
+    if (Iya.value == 1) {
+        Text.classList.remove('text-animate');
+        void Text.offsetWidth; 
+        Image.setAttribute("src", "https://media.tenor.com/CedXUNwq3fcAAAAi/tkthao219-bubududu.gif");
+        Text.innerHTML = "Hallo ini Aldi";
+        Text.classList.add('text-animate');
+    }else if (Iya.value == 2) {
+        Text.classList.remove('text-animate');
+        void Text.offsetWidth; 
+        Text.innerHTML = "Aldi mohon maaf<br>yang sebesar-besarnya<br>kepada "+y+"";
+        Image.setAttribute("src", "https://media.tenor.com/MtINOORXbYkAAAAi/tkthao219-bubududu.gif");
+        Text.classList.add('text-animate');
+    }else if (Iya.value == 3) {
+        Text.classList.remove('text-animate');
+        void Text.offsetWidth; 
+        Image.setAttribute("src", "https://media.tenor.com/pFo7ozGAwgUAAAAi/tkthao219-bubududu.gif");
+        Text.innerHTML = "Jika ada hati yang terluka<br>karena lidah yang tajam";
+        Text.classList.add('text-animate');
+    }else if (Iya.value == 4) {
+        Text.classList.remove('text-animate');
+        void Text.offsetWidth; 
+        Image.setAttribute("src", "https://media.tenor.com/OFxBdBgg7TAAAAAi/tkthao219-bubududu.gif");
+        Text.innerHTML = "Ada hati yang perih<br>karena buruknya tingkah laku";
+        Text.classList.add('text-animate');
+    }else if (Iya.value == 5) {
+        Text.classList.remove('text-animate');
+        void Text.offsetWidth; 
+        Image.setAttribute("src", "https://media.tenor.com/Wgpqkii_nUcAAAAi/peach-goma.gif");
+        Text.innerHTML = "Ada perasaan yang hancur<br>karena besarnya ego";
+        Text.classList.add('text-animate');
+    }else if (Iya.value == 6) {
+        Text.classList.remove('text-animate');
+        void Text.offsetWidth; 
+        Image.setAttribute("src", "	https://media.tenor.com/KJJzFHcN7f0AAAAi/tkthao219-bubududu.gif");
+        Text.innerHTML = "Mohon dibukakan pintu maaf<br>yang seluas-luasnya";
+        Text.classList.add('text-animate');
+    }else if (Iya.value == 7) {
+        Text.classList.remove('text-animate');
+        void Text.offsetWidth;
+        
+        const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    container: 'container-class',
+    popup: 'popup-class',
+    actions: 'vertical-buttons',
+    title: 'title-class',
+    icon: 'icon-class',
+    htmlContainer: 'htmlContainer-class',
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger',
+  },
+  buttonsStyling: false
+})
+
+swalWithBootstrapButtons.fire({
+  title: '<b>Maafin Aldi ya '+y+'</b>',
+  imageUrl: 'https://media.tenor.com/QyQgOYbPspgAAAAi/mimibubu.gif',
+  html:
+    'Maaf atas segala khilaf dan salah yang dilakukan!',
+  allowOutsideClick: false,
+  showCancelButton: true,
+  confirmButtonText: 'Ya!',
+  cancelButtonText: 'Tidak!',
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+    swalWithBootstrapButtons.fire({
+      title: '<b>'+y+' Memaafkan!!</b>',
+  imageUrl: 'https://media.tenor.com/crt3y-fzUTwAAAAi/mimibubu.gif',
+  html:
+    'Tiada pemberian yang terindah dan perbuatan termulia selain maaf dan saling memaafkan',
+  })
+  } else if (
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire({
+      title: '<b>'+y+' Tidak Memaafkan!!</b>',
+    imageUrl: 'https://media.tenor.com/Q9VuGIKQqEMAAAAi/love-bear.gif',
+    html:
+    'Orang Dengan kepribadian indah adalah mereka yang ikhlas memaafkan kesalahan orang lain'
+  })
+  }
+})
+        Image.setAttribute("src", "https://media.tenor.com/MTyONzJHiXAAAAAi/tkthao219-bubududu.gif");
+        Text.innerHTML = "Makasii "+y+"";
+        Text.classList.add('text-animate');
+    }else if (Iya.value == 8) {
+        Image.setAttribute("src", "https://c.tenor.com/T_16HTs34x4AAAAj/taqabbal-allahu-minna-wa-minkum-accept-god-with-us-and-you.gif");
+        Text.classList.remove('text-animate');
+        void Text.offsetWidth; 
+        Text.innerHTML = "تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ وَ تَقَبَّلْ ياَ كَرِيْمُ<br>Taqabbalallahu<br>Minna Wa Minkum";
+        Text.classList.add('text-animate');
+    }else if (Iya.value == 9) {
+        Image.setAttribute("src", "https://media.tenor.com/Og0PIeplqLoAAAAi/selemat-idul-fitri-selemat.gif");
+        Text.classList.remove('text-animate');
+        void Text.offsetWidth; 
+        Text.innerHTML = "Aldi & Keluarga Mengucapkan<br>Selamat Hari Raya Idul Fitri<br>1 Syawal 1445 Hijriah<br>Kepada:<br>"+y+" Sekeluarga<br>مِنَ العَائدِيْنَ والفَائِزِينَ<br>Minal Aidin Wal Faizin<br>Mohon Maaf Lahir & Batin";
+        Text.classList.add('text-animate');
+        Iya.remove();
+    }
+});	
+</script>
+	</body>
+</html>
